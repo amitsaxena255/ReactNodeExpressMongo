@@ -1,0 +1,38 @@
+{
+  "name": "react-node-express-app",
+  "version": "1.0.0",
+  "description": "@AmitSaxena - React-Node-Express App Boilerplate Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitsaxena255/NodeJS.git"
+  },
+  "keywords": [
+    "amitsaxena",
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "AmitSaxena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitsaxena255/NodeJS/issues"
+  },
+  "homepage": "https://github.com/amitsaxena255/NodeJS#readme"
+}
