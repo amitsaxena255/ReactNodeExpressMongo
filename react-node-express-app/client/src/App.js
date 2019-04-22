@@ -22,6 +22,7 @@ class App extends Component {
 }
   componentDidMount() {
     this.props.dispatch(initializeSessionData(this, "HELLO_ACTION", [], "GET", "/api/hello"));
+    this.props.dispatch(initializeSessionData(this, "CMPNY_ACTION", [], "GET", "/api/companies"));
 
     
   }
@@ -48,7 +49,13 @@ render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <div className="title">
+            POC - MERN+GraphQL
+          </div>
+          <div className="logo">
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
+          
         </header>
         <div className="body">
           <p>{this.state.response}</p>
