@@ -26,6 +26,13 @@ export default function session(state = initialState.session, action) {
             }
         }
 
+        case 'POST_COMPANY_ACTION':{
+            return {
+                ...state,
+                postCompanyResponse: action.data
+            }
+        }
+
 
         default:
             return state

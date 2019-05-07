@@ -23,7 +23,11 @@ class App extends Component {
   componentDidMount() {
     this.props.dispatch(initializeSessionData(this, "HELLO_ACTION", [], "GET", "/api/hello"));
     this.props.dispatch(initializeSessionData(this, "CMPNY_ACTION", [], "GET", "/api/companies"));
-
+    var body = {
+      "companyName": "Oracle India"
+    };
+    console.log(body);
+    this.props.dispatch(initializeSessionData(this, "POST_COMPANY_ACTION", body, "POST", "/api/companies"));
     
   }
   

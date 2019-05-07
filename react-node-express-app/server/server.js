@@ -7,7 +7,7 @@ const companyRouter = require('./util/companyHelper');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/', companyRouter);
+app.use('/api/companies', companyRouter);
 
 
 app.get('/api/hello', (req, res) => {

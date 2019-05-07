@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../database');
 
-router.get('/api/companies', (req, res) => {
+router.get('/', (req, res) => {
     var companyList = [];
     db.execute('select * from company').then(
       result => {
@@ -21,6 +21,21 @@ router.get('/api/companies', (req, res) => {
       }).catch((e) => {
         console.log("Error "+e);
         res.send({ companyList: companyList });
+    });
+  });
+
+  router.post('/', (req, res) => {
+    console.log(req.body);
+    var name=req.body.companyName;
+
+    db.execute(
+      `insert into company (name) values (?)`,[name]
+    ).then(
+      result => {
+        res.send({ postCompanyResponse: `${req.body.companyName} added successfully` });  
+      }).catch((e) => {
+
+        res.send({ postCompanyResponse: `${req.body.companyName} couldn't be added successfully ${e}` });
     });
   });
 
