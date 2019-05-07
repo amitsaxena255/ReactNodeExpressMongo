@@ -5,7 +5,8 @@
 
 const state = {
     session: {
-        helloResponse:''
+        helloResponse:'',
+        fetchMessageResponse:[]
     }
   }
   

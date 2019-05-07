@@ -14,6 +14,10 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
+app.get('/api/messages', (req, res) => {
+  res.send({ messages: ['Message 1','Message 2','Message 3','Message 4','Message 5'] });
+});
+
 
 app.post('/api/world', (req, res) => {
   console.log(req.body);

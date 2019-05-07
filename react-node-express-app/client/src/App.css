@@ -1,9 +1,5 @@
 .App {
-  text-align: left;
-}
-
-.body {
-  padding-left: 5px;
+  text-align: center;
 }
 
 .App-logo {
@@ -14,31 +10,48 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 5%;
-  display: block;
+  min-height: 10vh;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-bottom: 10px;
+  padding: 5px;
 }
 
-.logo{
-  text-align: right;   
+.App-body {
+  background-color: white;
+  color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding: 5px;
+}
+.Message-board {
+  background-color: white;
+  color: #282c34;
   display: inline-block;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding: 5px;
 }
 
-.title{
-  text-align: left;   
+.Message {
+  background-color: black;
+  color: white;
   display: inline-block;
-  width: 48%;
-  vertical-align:middle;
-  font-size: 32px;
-  padding-left: 5px;
-  padding-bottom: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  padding: 5px;
 }
+
 
 .App-link {
   color: #61dafb;

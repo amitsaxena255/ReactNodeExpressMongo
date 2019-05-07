@@ -33,6 +33,13 @@ export default function session(state = initialState.session, action) {
             }
         }
 
+        case 'FETCH_MESSAGES':{
+            return {
+                ...state,
+                fetchMessageResponse: action.data
+            }
+        }
+
 
         default:
             return state
